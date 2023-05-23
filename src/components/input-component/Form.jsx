@@ -7,7 +7,12 @@ export default function Form({addTodo}) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        addTodo(value);
+        if(e.target.value === "" || e.target.value === null || e.target.value === undefined) {
+            alert("please fill input.")
+            return false;
+        } else {
+            addTodo(value);
+        }
         setValue("");
         e.target.focus();
     }
