@@ -34,6 +34,9 @@ form {
   button[type="submit"]{
     height: calc(50px - 15px);
     width: calc(50px - 15px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     outline: none;
     background-color: $border;

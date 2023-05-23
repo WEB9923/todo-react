@@ -7,6 +7,19 @@
 }
 .wrapper .todo {
   width: 650px;
+  height: 100%;
+}
+.wrapper .todo .listContainer {
+  height: calc(100vh - 180px);
+  overflow-y: auto;
+}
+.wrapper .todo .listContainer::-webkit-scrollbar {
+  width: 4px;
+  background-color: #474545;
+}
+.wrapper .todo .listContainer::-webkit-scrollbar-thumb {
+  background-color: rgba(85, 85, 166, 0.87);
+  border-radius: 6px;
 }
 
 /*# sourceMappingURL=Wrapper.css.map */

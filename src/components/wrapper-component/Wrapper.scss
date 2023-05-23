@@ -1,3 +1,8 @@
+$bg: #474545;
+$border: rgba(85, 85, 166, 0.87);
+$radius: 6px;
+
+
 .wrapper{
   display: flex;
   justify-content: center;
@@ -6,5 +11,13 @@
   padding: 50px 0;
   .todo{
     width: 650px;
+    height: 100%;
+    .listContainer{
+      height: calc(100vh - 180px);
+      overflow-y: auto;
+      &::-webkit-scrollbar{width: 4px;background-color: $bg}
+      &::-webkit-scrollbar-thumb{background-color: $border;border-radius: $radius}
+    }
   }
 }
+

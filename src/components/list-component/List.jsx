@@ -1,6 +1,7 @@
 import React from "react";
 import "./List.scss";
 import { FaPenAlt, FaTrash} from "react-icons/fa";
+
 export default function List({todoTask,handleComplete,deleteTodo}) {
     return (
         <React.Fragment>
