@@ -10,7 +10,7 @@ export default function Wrapper() {
         setTodos([...todos, {id:uuidv4(), task:todo, completed:false, isEditing:false}])
         console.log(todos)
     }
-    const handlecomplete = (id) => {
+    const handleComplete = (id) => {
         setTodos(todos.map((todo) => todo.id === id ? {...todo,completed: !todo.completed} : todo))
     }
     const deleteTodo = (id) => {
@@ -29,7 +29,7 @@ export default function Wrapper() {
                                 <List
                                     todoTask={todo}
                                     key={uuidv4()}
-                                    handleComplete={handlecomplete}
+                                    handleComplete={handleComplete}
                                     deleteTodo={deleteTodo}
                                 />
                             ))
