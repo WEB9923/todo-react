@@ -7,14 +7,13 @@ import {v4 as uuidv4} from "uuid";
 export default function Wrapper() {
     const [todos,setTodos] = useState([]);
     const addTodo = (todo) => {
-        setTodos([...todos, {id:uuidv4(), task:todo, completed:false, isEditing:false}])
-        console.log(todos)
+        setTodos([...todos, {id:uuidv4(), task:todo, completed:false, isEditing:false}]);
     }
     const handleComplete = (id) => {
-        setTodos(todos.map((todo) => todo.id === id ? {...todo,completed: !todo.completed} : todo))
+        setTodos(todos.map((todo) => todo.id === id ? {...todo,completed: !todo.completed} : todo));
     }
     const deleteTodo = (id) => {
-        setTodos(todos.filter((todo) => todo.id !== id))
+        setTodos(todos.filter((todo) => todo.id !== id));
     }
     return (
         <React.Fragment>
