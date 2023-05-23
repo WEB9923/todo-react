@@ -1,0 +1,49 @@
+.list {
+  width: 100%;
+  min-height: 50px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3d3b3b;
+  border-radius: 6px;
+  padding: 5px 10px;
+  margin: 10px 0;
+}
+.list p {
+  color: #9c9898;
+  font-size: 17.5px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  cursor: pointer;
+  user-select: none;
+}
+.list p.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+.list div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+}
+.list div svg {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.list div svg:active {
+  scale: 0.9;
+}
+.list div svg:nth-child(1) {
+  color: rgba(85, 85, 166, 0.87);
+}
+.list div svg:last-child {
+  color: #dc4747;
+}
+
+/*# sourceMappingURL=List.css.map */

@@ -1,0 +1,55 @@
+$bg: #3d3b3b;
+$border: rgba(85, 85, 166, 0.87);
+$color: #9c9898;
+$radius: 6px;
+$small: 14px;
+$medium: 17.5px;
+$large: 22px;
+
+form {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+
+  input[type="text"] {
+    background-color: $bg;
+    border: 3px solid transparent;
+    outline: none;
+    height: inherit;
+    border-radius: $radius;
+    width: 100%;
+    font-size: $medium;
+    color: $color;
+    transition: all .2s ease;
+    padding: 0 10px;
+
+    &:focus {
+      border: 3px solid $border;
+    }
+  }
+
+  button[type="submit"]{
+    height: calc(50px - 15px);
+    width: calc(50px - 15px);
+    border: none;
+    outline: none;
+    background-color: $border;
+    border-radius: $radius;
+    cursor: pointer;
+    transition: .2s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 7px;
+    &:active{
+      scale: .90;
+    }
+    svg{
+      color: $bg;
+    }
+  }
+}
+
